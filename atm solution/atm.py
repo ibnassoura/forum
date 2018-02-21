@@ -3,13 +3,12 @@ class ATM:
         self.balance=balance
         self.bankname=bank_name
         
-    def withdraw(self,value):
+    def withdraw(self,request):
         print "Welcome to "+str(self.bankname)
         print "Current balance = "+str(self.balance)
-        request=value
         
         if request<=self.balance and request>0:
-            self.balance=self.balance - value
+            self.balance=self.balance - request
             moneylist=[100,50,10,5,2,1]
             for each in moneylist:
                 while request%each<request:
