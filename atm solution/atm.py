@@ -9,6 +9,7 @@ class ATM:
         request=value
         
         if request<=self.balance and request>0:
+            self.balance=self.balance - value
             moneylist=[100,50,10,5,2,1]
             for each in moneylist:
                 while request%each<request:
@@ -17,8 +18,7 @@ class ATM:
         else:
             print "Sorry, we dont have enogh money or you entered a wrong number"
             return self.balance
-        balance=self.balance - value
-        return balance
+        return self.balance
 
 
 balance1 = 500
